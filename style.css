@@ -74,6 +74,11 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Header for Shame page */
+.header.shame-header {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
 /* Content */
 .content {
   max-width: 800px;
@@ -108,6 +113,11 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Shame Section */
+.shame-section {
+  background: #e5e7eb;
+}
+
 /* Why We Started Section */
 .why-content {
   display: flex;
@@ -121,11 +131,11 @@ body {
 
 .why-image-container {
   flex: 1;
-  max-width: 300px;
 }
 
 .why-image {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 0.75rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -148,11 +158,11 @@ body {
 
 .about-image-container {
   flex: 1;
-  max-width: 300px;
 }
 
 .about-image {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 0.75rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -164,10 +174,6 @@ body {
 }
 
 /* Wall of Shame Section */
-.shame-section {
-  padding: 2.5rem;
-}
-
 .shame-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -177,6 +183,7 @@ body {
 .shame-card {
   background: white;
   border-radius: 0.75rem;
+  border: 2px solid #b91c1c;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -189,9 +196,9 @@ body {
 
 .shame-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-bottom: 2px solid #f97316;
+  max-width: 100%;
+  height: auto;
+  border-bottom: 2px solid #b91c1c;
 }
 
 .shame-card p {
@@ -271,9 +278,5 @@ body {
 
   .shame-grid {
     grid-template-columns: 1fr;
-  }
-
-  .shame-card img {
-    height: 150px;
   }
 }
