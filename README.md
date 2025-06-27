@@ -1,16 +1,32 @@
-## Hi there 👋
+# Fuel4School 
 
-<!--
-**fuel4school/fuel4school** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Fuel4School** is a student-led campaign dedicated to improving public school lunches across the city. We are advocating for healthier and more diverse school lunch options.
 
-Here are some ideas to get you started:
+## Purpose
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Many students rely on school meals as a primary source of nutrition. Unfortunately, our current lunch programs offered in NYC schools lack both quality and variety. 
+
+- Repersent student opinions with surveys and data. 
+- Advocate for improvements in meal quality.
+- Collaborate with students, educators, and community leaders to design a better lunch menu. 
+
+## Features
+
+- Student opinion system (HTML/JS using surveys) 
+- Interactive data visualizations (coming soon)
+
+
+## Built With
+
+- HTML5 & CSS3
+- GitHub Pages for deployment
+- JavaScript (planned for surveys and interactivity)
+
+## Get involved
+
+If you're a student, teacher, or advocate interested in school food justice, feel free to contribute or share feedback! Submit an issue or pull request — or just spread the word.
+
+## WebPage
+
+
+
