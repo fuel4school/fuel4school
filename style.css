@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f9fafb;
@@ -12,33 +16,10 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
-.header {
-  background: linear-gradient(135deg, #f97316, #ef4444);
-  color: white;
-  text-align: center;
-  padding: 4rem 1rem 3rem;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-}
-
-.header p {
-  font-size: 1.25rem;
-  font-weight: 300;
-  margin-top: 0.5rem;
-}
-
 /* Navbar */
 .navbar {
   background: white;
-  padding: 1rem;
+  padding: 0.75rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -49,7 +30,7 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .navbar a {
@@ -70,10 +51,33 @@ body {
   outline: none;
 }
 
+/* Header */
+.header {
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.header p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
 /* Content */
 .content {
   max-width: 800px;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 0 1.5rem;
 }
 
