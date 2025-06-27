@@ -11,15 +11,15 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f9fafb;
-  color: #1f2937;
-  line-height: 1.6;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.7;
 }
 
 /* Navbar */
 .navbar {
-  background: white;
-  padding: 0.75rem;
+  background: #f1f5f9;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -30,78 +30,90 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .navbar a {
-  color: #1f2937;
+  color: #1e293b;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #0ea5e9;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+  width: 100%;
 }
 
 .navbar a:hover,
 .navbar a:focus {
-  background-color: #fef3c7;
-  color: #f97316;
-  transform: translateY(-2px);
+  color: #0ea5e9;
   outline: none;
 }
 
 /* Header */
 .header {
-  background: linear-gradient(135deg, #f97316, #ef4444);
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
   color: white;
   text-align: center;
   padding: 2rem 1rem;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.header.shame-header {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   letter-spacing: -0.025em;
 }
 
 .header p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 300;
   margin-top: 0.5rem;
 }
 
-/* Header for Shame page */
-.header.shame-header {
-  background: linear-gradient(135deg, #ef4444, #b91c1c);
-}
-
 /* Content */
 .content {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
 }
 
 .section {
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
-  color: #2f6f2f;
+  color: #1e293b;
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -115,7 +127,7 @@ body {
 
 /* Shame Section */
 .shame-section {
-  background: #e5e7eb;
+  background: #e2e8f0;
 }
 
 /* Why We Started Section */
@@ -137,8 +149,8 @@ body {
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* About Us Section */
@@ -164,8 +176,8 @@ body {
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* Survey Section */
@@ -176,29 +188,29 @@ body {
 /* Wall of Shame Section */
 .shame-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .shame-card {
-  background: white;
-  border-radius: 0.75rem;
-  border: 2px solid #b91c1c;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  border-radius: 0.5rem;
+  border: 1px solid #b91c1c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .shame-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .shame-card img {
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-bottom: 2px solid #b91c1c;
+  border-bottom: 1px solid #b91c1c;
 }
 
 .shame-card p {
@@ -216,7 +228,7 @@ body {
 
 .cta a {
   display: inline-block;
-  background: #f97316;
+  background: #0ea5e9;
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -227,7 +239,7 @@ body {
 
 .cta a:hover,
 .cta a:focus {
-  background: #ef4444;
+  background: #0284c7;
   transform: translateY(-2px);
   outline: none;
 }
@@ -236,29 +248,32 @@ body {
 .footer {
   text-align: center;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #fef3c7, #fed7aa);
-  color: #444;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  color: #475569;
   font-size: 0.9rem;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-  max-width: 800px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  max-width: 900px;
   margin: 0 auto;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .header h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .header p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .navbar ul {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
+  }
+
+  .navbar a {
+    font-size: 1rem;
   }
 
   .section {
