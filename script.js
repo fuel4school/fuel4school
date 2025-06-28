@@ -52,12 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Load saved preference
-  const savedDarkMode = localStorage.getItem('dynamicMode') === 'true';
-  if (savedDarkMode) {
-    applyMode(true);
-  } else {
-    applyMode(false); // Default to light mode
-  }
+  const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+  applyMode(savedDarkMode);
 
   // Add scroll event listener
   window.addEventListener('scroll', handleScroll);
