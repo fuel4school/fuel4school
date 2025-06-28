@@ -1,20 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
-  const menuToggle = document.createElement('button');
-  menuToggle.className = 'menu-toggle';
-  menuToggle.innerHTML = '☰';
-  navbar.appendChild(menuToggle);
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const toggleMode = document.querySelector('.toggle-mode');
+  const logo = document.querySelector('.logo');
 
-  const logo = document.createElement('a');
-  logo.className = 'logo';
-  logo.href = 'index.html';
-  logo.textContent = 'F4S';
-  navbar.insertBefore(logo, navbar.firstChild);
-
-  const toggleMode = document.createElement('button');
-  toggleMode.className = 'toggle-mode';
-  toggleMode.textContent = 'Toggle Mode';
-  navbar.insertBefore(toggleMode, navbar.firstChild.nextSibling);
+  if (!navbar || !menuToggle || !navLinks || !toggleMode || !logo) {
+    console.error('One or more navbar elements not found');
+    return;
+  }
 
   let lastScroll = 0;
   let scrollTimeout;
@@ -39,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Close mobile menu when clicking a link
-  navbar.querySelectorAll('a').forEach(link => {
+  navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navbar.classList.remove('active');
     });
@@ -49,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const applyMode = (isDark) => {
     document.body.classList.toggle('dark-mode', isDark);
     localStorage.setItem('darkMode', isDark);
-    toggleMode.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    toggleMode.textContent = isDark ? 'Toggle to Light Mode' : 'Toggle to Dark Mode';
   };
 
   toggleMode.addEventListener('click', () => {
@@ -58,18 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Load saved preference
-  const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+  const savedDarkMode = localStorage.getItem('dynamicMode') === 'true';
   if (savedDarkMode) {
     applyMode(true);
   } else {
-    applyMode(false); // Ensure light mode is applied if no preference
+    applyMode(false); // Default to light mode
   }
 
   // Add scroll event listener
   window.addEventListener('scroll', handleScroll);
-
-  // Error handling
-  if (!navbar) {
-    console.error('Navbar not found');
-  }
 });
