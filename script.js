@@ -5,10 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggle.innerHTML = '☰';
   navbar.appendChild(menuToggle);
 
-  const toggleDarkMode = document.createElement('button');
-  toggleDarkMode.className = 'toggle-dark-mode';
-  toggleDarkMode.textContent = 'Toggle Dark Mode';
-  navbar.appendChild(toggleDarkMode);
+  const logo = document.createElement('a');
+  logo.className = 'logo';
+  logo.href = 'index.html';
+  logo.textContent = 'F4S';
+  navbar.insertBefore(logo, navbar.firstChild);
+
+  const toggleMode = document.createElement('button');
+  toggleMode.className = 'toggle-mode';
+  toggleMode.textContent = 'Toggle Mode';
+  navbar.insertBefore(toggleMode, navbar.firstChild.nextSibling);
 
   let lastScroll = 0;
   let scrollTimeout;
@@ -39,21 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Dark mode toggle
-  const applyDarkMode = (isDark) => {
+  // Mode toggle
+  const applyMode = (isDark) => {
     document.body.classList.toggle('dark-mode', isDark);
     localStorage.setItem('darkMode', isDark);
+    toggleMode.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
   };
 
-  toggleDarkMode.addEventListener('click', () => {
+  toggleMode.addEventListener('click', () => {
     const isDark = !document.body.classList.contains('dark-mode');
-    applyDarkMode(isDark);
+    applyMode(isDark);
   });
 
   // Load saved preference
   const savedDarkMode = localStorage.getItem('darkMode') === 'true';
   if (savedDarkMode) {
-    applyDarkMode(true);
+    applyMode(true);
+  } else {
+    applyMode(false); // Ensure light mode is applied if no preference
   }
 
   // Add scroll event listener
