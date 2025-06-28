@@ -15,9 +15,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent: #065f55; /* Darker teal */
+    --accent: #065f55;
     --accent-dark: #0f766e;
-    --shame-accent: #be185d; /* Darker coral */
+    --shame-accent: #be185d;
     --shame-accent-dark: #ec4899;
     --bg-color: #1e293b;
     --text-color: #f1f5f9;
@@ -65,34 +65,32 @@ body {
 
 /* Navbar */
 .navbar {
-  background: var(--bg-color);
+  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: var(--shadow);
-  border-bottom: 1px solid #e5e7eb;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar ul {
-  list-style: none;
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.navbar .nav-links {
   display: flex;
-  gap: 8rem;
-  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
 }
 
-.navbar li:first-child {
-  margin-right: auto;
-}
-
-.navbar li:last-child {
-  margin-left: auto;
-}
-
-.navbar a {
-  color: var(--text-color);
+.navbar .nav-links a {
+  color: var(--bg-color);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.2rem;
@@ -101,27 +99,27 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar a::after {
+.navbar .nav-links a::after {
   content: '';
   position: absolute;
   width: 0;
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: var(--accent);
+  background-color: var(--bg-color);
   transition: width 0.3s ease;
 }
 
-.navbar a:hover::after,
-.navbar a:focus::after,
-.navbar a.active::after {
+.navbar .nav-links a:hover::after,
+.navbar .nav-links a:focus::after,
+.navbar .nav-links a.active::after {
   width: 100%;
 }
 
-.navbar a:hover,
-.navbar a:focus,
-.navbar a.active {
-  color: var(--accent);
+.navbar .nav-links a:hover,
+.navbar .nav-links a:focus,
+.navbar .nav-links a.active {
+  color: var(--card-bg);
 }
 
 /* Mobile Menu Toggle */
@@ -130,7 +128,7 @@ body {
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: var(--text-color);
+  color: var(--bg-color);
   cursor: pointer;
 }
 
@@ -138,7 +136,7 @@ body {
   display: block;
 }
 
-.navbar.active ul {
+.navbar.active .nav-links {
   display: none;
 }
 
@@ -148,7 +146,7 @@ body {
   position: absolute;
   top: 100%;
   right: 2rem;
-  background: var(--card-bg);
+  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
   box-shadow: var(--hover-shadow);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -157,7 +155,23 @@ body {
 .navbar.active .mobile-menu a {
   padding: 0.5rem 1rem;
   display: block;
-  color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Toggle Button */
+.toggle-mode {
+  background: none;
+  border: 1px solid var(--bg-color);
+  color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.toggle-mode:hover {
+  background: var(--card-bg);
+  color: var(--accent);
 }
 
 /* Header */
@@ -175,38 +189,6 @@ body {
 
 .header.shame-header {
   background: linear-gradient(135deg, var(--shame-accent), var(--shame-accent-dark));
-}
-
-/* Toggle Button (added to navbar) */
-.toggle-dark-mode {
-  position: absolute;
-  left: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.toggle-dark-mode:hover {
-  background: var(--accent);
-  color: var(--bg-color);
-}
-
-.header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.header p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-top: 0.75rem;
 }
 
 /* Content */
@@ -356,7 +338,11 @@ body {
     padding: 1rem;
   }
 
-  .navbar ul {
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+
+  .navbar .nav-links {
     display: none;
   }
 
@@ -406,11 +392,9 @@ body {
     padding: 0.75rem 1.5rem;
   }
 
-  .toggle-dark-mode {
-    left: 1rem;
-    top: 0.75rem;
-    transform: none;
-    margin-top: 0.5rem;
+  .toggle-mode {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
