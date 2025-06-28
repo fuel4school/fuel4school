@@ -13,23 +13,6 @@
   --footer-text: #64748b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent: #065f55;
-    --accent-dark: #0f766e;
-    --shame-accent: #be185d;
-    --shame-accent-dark: #ec4899;
-    --bg-color: #1e293b;
-    --text-color: #f1f5f9;
-    --secondary-text: #94a3b8;
-    --card-bg: #2d3748;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    --hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    --footer-bg: #2d3748;
-    --footer-text: #cbd5e1;
-  }
-}
-
 .dark-mode {
   --accent: #065f55;
   --accent-dark: #0f766e;
