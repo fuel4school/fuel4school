@@ -2,8 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
   const menuToggle = document.createElement('button');
   menuToggle.className = 'menu-toggle';
-  menuToggle.innerHTML = '☰'; // Hamburger icon
+  menuToggle.innerHTML = '☰';
   navbar.appendChild(menuToggle);
+
+  const toggleDarkMode = document.createElement('button');
+  toggleDarkMode.className = 'toggle-dark-mode';
+  toggleDarkMode.textContent = 'Toggle Dark Mode';
+  navbar.appendChild(toggleDarkMode);
 
   let lastScroll = 0;
   let scrollTimeout;
@@ -19,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.remove('hidden');
       }
       lastScroll = currentScroll;
-    }, 100); // Debounce delay
+    }, 100);
   };
 
   // Mobile menu toggle
@@ -33,6 +38,23 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.remove('active');
     });
   });
+
+  // Dark mode toggle
+  const applyDarkMode = (isDark) => {
+    document.body.classList.toggle('dark-mode', isDark);
+    localStorage.setItem('darkMode', isDark);
+  };
+
+  toggleDarkMode.addEventListener('click', () => {
+    const isDark = !document.body.classList.contains('dark-mode');
+    applyDarkMode(isDark);
+  });
+
+  // Load saved preference
+  const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+  if (savedDarkMode) {
+    applyDarkMode(true);
+  }
 
   // Add scroll event listener
   window.addEventListener('scroll', handleScroll);
