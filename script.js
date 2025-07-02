@@ -57,4 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add scroll event listener
   window.addEventListener('scroll', handleScroll);
+
+  // Survey form submission (basic alert for now)
+  const surveyForm = document.querySelector('.survey-form');
+  if (surveyForm) {
+    surveyForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your feedback! We’ll review it soon.');
+      surveyForm.reset();
+    });
+  }
 });
