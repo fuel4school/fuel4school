@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuel4School - Statistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">F4S</a>
+    <label class="toggle-switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="slider"></span>
+    </label>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shame.html">Wall of Shame</a>
+      <a href="stats.html" class="active">Stats</a>
+    </div>
+    <button class="menu-toggle">☰</button>
+  </nav>
 
+  <header class="header shame-header">
+    <h1>Survey Statistics</h1>
+    <p>Insights from your feedback on school lunches.</p>
+  </header>
+
+  <main class="content">
+    <section class="section">
+      <h2>Lunch Quality Feedback</h2>
+      <canvas id="qualityChart" width="400" height="200"></canvas>
+    </section>
+    <section class="section">
+      <h2>Lunch Frequency</h2>
+      <canvas id="frequencyChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Fuel4School</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
