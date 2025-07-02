@@ -10,10 +10,14 @@
 <body>
   <nav class="navbar">
     <a href="index.html" class="logo">F4S</a>
-    <button class="toggle-mode">Toggle to Dark Mode</button>
+    <label class="toggle-switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="slider"></span>
+    </label>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="shame.html">Wall of Shame</a>
+      <a href="stats.html">Stats</a>
     </div>
     <button class="menu-toggle">☰</button>
   </nav>
@@ -31,19 +35,36 @@
 
     <section id="survey" class="section survey-section">
       <h2>Survey</h2>
-      <p>We’re developing a survey to gather your input on school lunches. Check back soon or contact us to get involved!</p>
-      <form class="survey-form" action="#" method="POST">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="feedback">What do you think of your school lunches?</label>
-        <textarea id="feedback" name="feedback" rows="4" required></textarea>
-        <button type="submit">Submit Feedback</button>
+      <p>Share your thoughts on school lunches to help us improve!</p>
+      <form id="surveyForm" class="survey-form">
+        <label>What do you think of the lunch quality?</label>
+        <div>
+          <input type="radio" id="good" name="lunchQuality" value="good" required>
+          <label for="good">Good</label>
+        </div>
+        <div>
+          <input type="radio" id="average" name="lunchQuality" value="average" required>
+          <label for="average">Average</label>
+        </div>
+        <div>
+          <input type="radio" id="poor" name="lunchQuality" value="poor" required>
+          <label for="poor">Poor</label>
+        </div>
+        <label>How often do you eat school lunch?</label>
+        <div>
+          <input type="radio" id="daily" name="lunchFrequency" value="daily" required>
+          <label for="daily">Daily</label>
+        </div>
+        <div>
+          <input type="radio" id="weekly" name="lunchFrequency" value="weekly" required>
+          <label for="weekly">Weekly</label>
+        </div>
+        <div>
+          <input type="radio" id="rarely" name="lunchFrequency" value="rarely" required>
+          <label for="rarely">Rarely</label>
+        </div>
+        <button type="submit">Submit</button>
       </form>
-      <div class="cta">
-        <a href="#about">Learn More About Our Mission</a>
-      </div>
     </section>
 
     <section id="why" class="section">
