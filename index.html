@@ -10,10 +10,12 @@
 <body>
   <nav class="navbar">
     <a href="index.html" class="logo">f4s</a>
-    <label class="toggle-switch">
-      <input type="checkbox" id="dark-mode-toggle">
-      <span class="slider"></span>
-    </label>
+    <div class="nav-right">
+      <label class="toggle-switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
     <div class="nav-links">
       <a href="index.html" class="active">home</a>
       <a href="shame.html">wall of shame</a>
@@ -22,27 +24,28 @@
     <button class="menu-toggle">☰</button>
   </nav>
 
-  <header class="header">
+  <header class="hero">
     <h1>fuel4school</h1>
-    <p>helping high schoolers improve school lunches</p>
+    <p class="subtitle">Helping High Schoolers Improve School Lunches</p>
+    <a href="#learn-more" class="learn-more">Learn More</a>
   </header>
 
-  <main class="content">
-    <section id="mission" class="section">
-      <h2>our mission</h2>
-      <p>we’re high school students working to make school meals healthier and more inclusive. we collect feedback and push for change.</p>
+  <main class="content" id="learn-more">
+    <section id="mission" class="section animate">
+      <h2>Our Mission</h2>
+      <p>We’re high school students working to make school meals healthier and more inclusive. We collect feedback and push for change.</p>
     </section>
 
-    <section id="survey" class="section survey-section" onclick="window.location.href='survey.html'">
-      <h2>survey</h2>
-      <p>click here to share your thoughts and help improve lunches</p>
+    <section id="survey" class="section animate survey-section" onclick="window.location.href='survey.html'">
+      <h2>Survey</h2>
+      <p>Click here to share your thoughts and help improve lunches</p>
     </section>
 
-    <section id="why" class="section">
+    <section id="why" class="section animate">
       <div class="flex-section">
         <div class="flex-text">
-          <h2>why we started</h2>
-          <p>we began fuel4school because we’re worried about unhealthy school lunches and want better options for students.</p>
+          <h2>Why We Started</h2>
+          <p>We began fuel4school because we’re worried about unhealthy school lunches and want better options for students.</p>
         </div>
         <div class="flex-image">
           <img src="https://i.pinimg.com/originals/e7/17/2f/e7172fc7af2fb006dc6a9649927b7685.gif" alt="students working together" loading="lazy" />
@@ -50,17 +53,17 @@
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section animate">
       <div class="flex-section">
         <div class="flex-text">
-          <h2>about us</h2>
-          <p>fuel4school is a student-led effort to fix poor school lunches. we care about food justice and healthier meals.</p>
-          <p>the school lunch budget is $600 million, just 1.5% of the $40 billion doe budget. cuts have removed popular items like chicken tenders.</p>
-          <p>nyc schools produce 80 million pounds of trash yearly, with 47% as food waste. composting helps, but much is still wasted.</p>
-          <p>join us! take the survey or work with us to make a difference.</p>
+          <h2>About Us</h2>
+          <p>fuel4school is a student-led effort to fix poor school lunches. We care about food justice and healthier meals.</p>
+          <p>The school lunch budget is $600 million, just 1.5% of the $40 billion DOE budget. Cuts have removed popular items like chicken tenders.</p>
+          <p>NYC schools produce 80 million pounds of trash yearly, with 47% as food waste. Composting helps, but much is still wasted.</p>
+          <p>Join us! Take the survey or work with us to make a difference.</p>
         </div>
         <div class="flex-image">
-          <img src="https://food.unl.edu/sites/unl.edu.ianr.extension.food/files/styles/no_crop_1440/public/media/image/lunch-for-children.jpg?itok=ahtZN2GQ" alt="healthy school lunch" loading="lazy" />
+          <img src="https://cdn.svgator.com/assets/landing-pages/svg-to-gif/f6/animated-flying-bird.gif" alt="animated bird" loading="lazy" />
         </div>
       </div>
     </section>
