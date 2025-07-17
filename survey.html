@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fuel4school - survey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">f4s</a>
+    <div class="nav-right">
+      <label class="toggle-switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="shame.html">wall of shame</a>
+      <a href="stats.html">stats</a>
+    </div>
+    <button class="menu-toggle">☰</button>
+  </nav>
+
+  <header class="header">
+    <h1>fuel4school survey</h1>
+    <p>share your thoughts to help improve lunches</p>
+  </header>
+
+  <main class="content">
+    <section id="survey" class="section survey-section">
+      <form id="surveyForm" class="survey-form">
+        <label>Please evaluate the overall quality and healthfulness of the school lunch program.</label>
+        <div>
+          <input type="radio" id="excellent" name="lunchEvaluation" value="excellent" required>
+          <label for="excellent">Excellent</label>
+        </div>
+        <div>
+          <input type="radio" id="very_good" name="lunchEvaluation" value="very_good" required>
+          <label for="very_good">Very Good</label>
+        </div>
+        <div>
+          <input type="radio" id="satisfactory" name="lunchEvaluation" value="satisfactory" required>
+          <label for="satisfactory">Satisfactory</label>
+        </div>
+        <div>
+          <input type="radio" id="poor" name="lunchEvaluation" value="poor" required>
+          <label for="poor">Poor</label>
+        </div>
+        <div>
+          <input type="radio" id="unsatisfactory" name="lunchEvaluation" value="unsatisfactory" required>
+          <label for="unsatisfactory">Unsatisfactory</label>
+        </div>
+
+        <label>Are the portion sizes adequate?</label>
+        <div>
+          <input type="radio" id="portion_yes" name="portionAdequate" value="yes" required>
+          <label for="portion_yes">Yes</label>
+        </div>
+        <div>
+          <input type="radio" id="portion_no" name="portionAdequate" value="no" required>
+          <label for="portion_no">No</label>
+        </div>
+        <div>
+          <input type="radio" id="portion_neutral" name="portionAdequate" value="neutral" required>
+          <label for="portion_neutral">Neutral</label>
+        </div>
+
+        <label>Is the lunch service efficient?</label>
+        <div>
+          <input type="radio" id="service_yes" name="serviceEfficient" value="yes" required>
+          <label for="service_yes">Yes</label>
+        </div>
+        <div>
+          <input type="radio" id="service_no" name="serviceEfficient" value="no" required>
+          <label for="service_no">No</label>
+        </div>
+        <div>
+          <input type="radio" id="service_neutral" name="serviceEfficient" value="neutral" required>
+          <label for="service_neutral">Neutral</label>
+        </div>
+
+        <label>Would you recommend the lunch program to others?</label>
+        <div>
+          <input type="radio" id="recommend_yes" name="recommendProgram" value="yes" required>
+          <label for="recommend_yes">Yes</label>
+        </div>
+        <div>
+          <input type="radio" id="recommend_no" name="recommendProgram" value="no" required>
+          <label for="recommend_no">No</label>
+        </div>
+        <div>
+          <input type="radio" id="recommend_neutral" name="recommendProgram" value="neutral" required>
+          <label for="recommend_neutral">Neutral</label>
+        </div>
+
+        <button type="submit">submit</button>
+      </form>
+      <section id="sampleAnswers" class="section">
+        <h2>Sample Responses</h2>
+        <div id="answersDisplay" class="answers-display"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
