@@ -3,43 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fuel4School - Statistics</title>
+  <title>fuel4school - statistics</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
-    <a href="index.html" class="logo">F4S</a>
+    <a href="index.html" class="logo">f4s</a>
     <label class="toggle-switch">
       <input type="checkbox" id="dark-mode-toggle">
       <span class="slider"></span>
     </label>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shame.html">Wall of Shame</a>
-      <a href="stats.html" class="active">Stats</a>
+      <a href="index.html">home</a>
+      <a href="shame.html">wall of shame</a>
+      <a href="stats.html" class="active">stats</a>
     </div>
     <button class="menu-toggle">☰</button>
   </nav>
 
   <header class="header shame-header">
-    <h1>Survey Statistics</h1>
-    <p>Insights from your feedback on school lunches.</p>
+    <h1>survey statistics</h1>
+    <p>see what high schoolers think about lunches</p>
   </header>
 
   <main class="content">
     <section class="section">
-      <h2>Lunch Quality Feedback</h2>
+      <h2>lunch quality feedback</h2>
       <canvas id="qualityChart" width="400" height="200"></canvas>
     </section>
     <section class="section">
-      <h2>Lunch Frequency</h2>
+      <h2>lunch frequency</h2>
       <canvas id="frequencyChart" width="400" height="200"></canvas>
+    </section>
+    <section class="section">
+      <h2>profession distribution</h2>
+      <canvas id="professionChart" width="400" height="200"></canvas>
+    </section>
+    <section class="section">
+      <h2>work setting distribution</h2>
+      <canvas id="settingChart" width="400" height="200"></canvas>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 Fuel4School</p>
   </footer>
 
   <script src="script.js"></script>
