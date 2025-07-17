@@ -46,6 +46,10 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.nav-right {
+  margin-left: 1rem;
+}
+
 .logo {
   font-size: 1.2rem;
   font-weight: 700;
@@ -152,17 +156,39 @@ input:checked + .slider:before {
   transform: translateX(20px);
 }
 
-.header {
+.hero {
   background: var(--primary);
   color: var(--background);
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 1rem;
   margin-bottom: 2rem;
   animation: fadeIn 0.5s ease-in;
 }
 
-.header.shame-header {
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.learn-more {
+  display: inline-block;
   background: var(--secondary);
+  color: var(--background);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.learn-more:hover {
+  background: var(--secondary-dark);
 }
 
 .content {
@@ -178,11 +204,18 @@ input:checked + .slider:before {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .section:hover {
   transform: translateY(-2px);
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .section h2 {
@@ -283,6 +316,10 @@ input:checked + .slider:before {
   margin-top: 2rem;
 }
 
+.answers-display {
+  padding: 1rem;
+}
+
 @media (min-width: 600px) {
   .flex-section {
     grid-template-columns: 1fr 1fr;
@@ -298,6 +335,14 @@ input:checked + .slider:before {
 
   .navbar.active .mobile-menu {
     display: none;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
   }
 }
 
