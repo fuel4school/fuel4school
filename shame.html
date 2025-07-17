@@ -3,47 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wall of Shame - Fuel4School</title>
+  <title>fuel4school - wall of shame</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
-    <a href="index.html" class="logo">F4S</a>
-    <button class="toggle-mode">Toggle to Dark Mode</button>
+    <a href="index.html" class="logo">f4s</a>
+    <label class="toggle-switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="slider"></span>
+    </label>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shame.html" class="active">Wall of Shame</a>
+      <a href="index.html">home</a>
+      <a href="shame.html" class="active">wall of shame</a>
+      <a href="stats.html">stats</a>
     </div>
     <button class="menu-toggle">☰</button>
   </nav>
 
   <header class="header shame-header">
-    <h1>Wall of Shame</h1>
-    <p>Highlighting what’s wrong with NYC school lunches 🍎</p>
+    <h1>wall of shame</h1>
+    <p>highlighting lunch issues at school</p>
   </header>
 
   <main class="content">
-    <section class="section shame-section">
-      <h2>Why We Need Change</h2>
-      <p>These are real examples of school lunches that miss the mark. From bland flavors to tiny portions, this is why we’re fighting for better meals. Help us fix this—take our survey!</p>
-      
-      <div class="shame-grid">
-        <div class="shame-card">
-          <img src="https://nypost.com/wp-content/uploads/sites/2/2022/06/eric-adams-nyc-school-lunch-11.jpg" alt="Unappetizing NYC school lunch with unrecognizable food portions" loading="lazy" />
-          <p>This is what some students were served for lunch in NYC. Is this really fueling anyone?</p>
-        </div>
-        <!-- Add more cards here -->
+    <section class="section shame-grid">
+      <div class="shame-card">
+        <img src="https://via.placeholder.com/300x200" alt="poor lunch example" loading="lazy" />
+        <p>unhealthy meal</p>
       </div>
-
-      <div class="cta">
-        <a href="index.html#survey">Join the Fight: Take Our Survey!</a>
+      <div class="shame-card">
+        <img src="https://via.placeholder.com/300x200" alt="food waste" loading="lazy" />
+        <p>too much waste</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 Fuel4School</p>
   </footer>
 
   <script src="script.js"></script>
