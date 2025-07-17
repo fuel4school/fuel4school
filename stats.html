@@ -10,10 +10,12 @@
 <body>
   <nav class="navbar">
     <a href="index.html" class="logo">f4s</a>
-    <label class="toggle-switch">
-      <input type="checkbox" id="dark-mode-toggle">
-      <span class="slider"></span>
-    </label>
+    <div class="nav-right">
+      <label class="toggle-switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
     <div class="nav-links">
       <a href="index.html">home</a>
       <a href="shame.html">wall of shame</a>
@@ -29,20 +31,20 @@
 
   <main class="content">
     <section class="section">
-      <h2>lunch quality feedback</h2>
-      <canvas id="qualityChart" width="400" height="200"></canvas>
+      <h2>lunch evaluation feedback</h2>
+      <canvas id="evaluationChart" width="400" height="200"></canvas>
     </section>
     <section class="section">
-      <h2>lunch frequency</h2>
-      <canvas id="frequencyChart" width="400" height="200"></canvas>
+      <h2>portion size feedback</h2>
+      <canvas id="portionChart" width="400" height="200"></canvas>
     </section>
     <section class="section">
-      <h2>profession distribution</h2>
-      <canvas id="professionChart" width="400" height="200"></canvas>
+      <h2>service efficiency feedback</h2>
+      <canvas id="serviceChart" width="400" height="200"></canvas>
     </section>
     <section class="section">
-      <h2>work setting distribution</h2>
-      <canvas id="settingChart" width="400" height="200"></canvas>
+      <h2>recommendation feedback</h2>
+      <canvas id="recommendChart" width="400" height="200"></canvas>
     </section>
   </main>
 
