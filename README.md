@@ -1,6 +1,6 @@
-# Fuel4School 
+# fuel4school
 
-**Fuel4School** is a student-led campaign dedicated to improving public school lunches across the city. We are advocating for healthier and more diverse school lunch options.
+**fuel4school** is a student-led campaign dedicated to improving public school lunches across the city. We are advocating for healthier and more diverse school lunch options.
 
 ## Purpose
 
